@@ -46,6 +46,7 @@ body {
   background-color: var(--page-bg);
   background-image: url("images/taulu.png");
   background-size: cover;
+
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;

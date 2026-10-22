@@ -475,9 +475,7 @@ h1 {
 }
 
 
-/* ========================================
-   10. NÄPPÄIMISTÖKÄYTTÖ
-======================================== */
+/näppäimistön navigointia varten,eli toimii nuolien kans
 
 .task-checkbox:focus-visible,
 button:focus-visible {
@@ -486,9 +484,7 @@ button:focus-visible {
 }
 
 
-/* ========================================
-   11. MOBIILILAITTEET
-======================================== */
+/Mobiililaitteille sopiva asettelu...
 
 @media (max-width: 520px) {
     .board {

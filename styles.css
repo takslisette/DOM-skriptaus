@@ -475,7 +475,7 @@ h1 {
 }
 
 
-/näppäimistön navigointia varten,eli toimii nuolien kans
+näppäimistön navigointia varten,eli toimii nuolien kans
 
 .task-checkbox:focus-visible,
 button:focus-visible {
@@ -484,7 +484,7 @@ button:focus-visible {
 }
 
 
-/Mobiililaitteille sopiva asettelu...
+Mobiililaitteille sopiva asettelu
 
 @media (max-width: 520px) {
     .board {

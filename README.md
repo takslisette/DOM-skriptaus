@@ -19,7 +19,7 @@ Listaa vähintään kolme sovellukseesi suunniteltua toimintoa:
 Verkkolinkit
 •	Julkaistu sovellus: https://takslisette.github.io/DOM-skriptaus/
 •	GitHub-repositorio: https://github.com/takslisette/DOM-skriptaus.git 
-•	Projektin videoesittely: Lisää tähän videon osoite
+•	Projektin videoesittely: https://youtu.be/3cdy2EX_cmM
 
 Tietoja sovelluksesta
 To do-lista ennen koulua on verkkosovellus, joka auttaa tekemään asiat ennen kouluun menemistä. Eli sovellus on tarkoitettu koululaisille, ketkä tarvitsevat muistilistan tehtävilleen. Sovelluksessa pystyt kirjaamaan niin monta haluamaasi tehtävää, ja pystyt näkemään joko ”kaikki” tehtävät tai halutessasi vain ”Kesken” olevat tehtävät tai ”Tehdyt”. Sovellus tallentaa aina (Localstorage) jättämäsi tehtävät/muutokset, joten voit käyttää listaa aina uudelleen. 

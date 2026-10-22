@@ -165,8 +165,6 @@ h1 {
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-/* Syöttökenttä, kun sitä käytetään */
-
 #task-input:focus {
     border-color: var(--green);
     box-shadow: 0 0 0 3px rgba(40, 107, 77, 0.14);
@@ -183,7 +181,7 @@ h1 {
     box-shadow: 0 0 0 3px rgba(200, 60, 60, 0.12);
 }
 
-/* Lomakkeen virheilmoitus */
+/* Virheilmoitus */
 
 .error-message {
     min-height: 18px;
@@ -226,16 +224,48 @@ h1 {
 
 
 /* ========================================
-   7. TEHTÄVÄLISTA
+   7. TEHTÄVÄLISTA JA RULLAUS
 ======================================== */
 
 .task-list {
     list-style: none;
-    padding: 0;
+    padding: 4px;
     margin: 0;
 
     display: grid;
     gap: 10px;
+
+    /* Lista ei kasva rajattomasti alaspäin */
+    max-height: 260px;
+
+    /* Vieritys pystysuunnassa */
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    /* Vierityksen käyttäytyminen */
+    overscroll-behavior-y: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #8aaf98 #f0eee4;
+}
+
+/* Vierityspalkki Chrome-, Edge- ja Safari-selaimissa */
+
+.task-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.task-list::-webkit-scrollbar-track {
+    background: #f0eee4;
+    border-radius: 10px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+    background: #8aaf98;
+    border-radius: 10px;
+}
+
+.task-list::-webkit-scrollbar-thumb:hover {
+    background: var(--green);
 }
 
 /* Yksittäinen tehtävä */
@@ -258,13 +288,13 @@ h1 {
     transition: background 0.2s;
 }
 
-/* Valmiiksi tehty tehtävä */
+/* Tehty tehtävä */
 
 .task-item.completed {
     background: var(--green-light);
 }
 
-/* Tehtävän valintaruutu */
+/* Valintaruutu */
 
 .task-checkbox {
     appearance: none;
@@ -283,8 +313,6 @@ h1 {
     cursor: pointer;
     position: relative;
 }
-
-/* Valittu valintaruutu */
 
 .task-checkbox:checked {
     background: var(--green);
@@ -315,7 +343,7 @@ h1 {
     font-weight: bold;
 }
 
-/* Yliviivattu teksti, kun tehtävä on valmis */
+/* Valmiin tehtävän yliviivaus */
 
 .completed .task-text {
     color: #7d817a;
@@ -347,7 +375,7 @@ h1 {
     color: var(--red);
 }
 
-/* Teksti, joka näytetään tyhjällä listalla */
+/* Tyhjän listan ilmoitus */
 
 .empty-message {
     color: #85857a;
@@ -371,8 +399,6 @@ h1 {
     margin-top: 22px;
 }
 
-/* Kaikki-, Kesken- ja Tehdyt-painikkeet */
-
 .filter-button {
     padding: 8px 20px;
     min-width: 82px;
@@ -394,8 +420,6 @@ h1 {
     border-color: var(--green);
 }
 
-/* Valittu suodatin */
-
 .filter-button.active {
     background: var(--green);
     border-color: var(--green);
@@ -404,7 +428,7 @@ h1 {
 
 
 /* ========================================
-   9. ALAREUNAN TEKSTIT JA PAINIKKEET
+   9. KORTIN ALAREUNA
 ======================================== */
 
 .card-footer {
@@ -423,8 +447,6 @@ h1 {
     font-size: 12px;
 }
 
-/* Poista tehdyt -painike */
-
 .clear-button {
     border: 0;
     padding: 5px;
@@ -442,8 +464,6 @@ h1 {
     color: var(--green-dark);
 }
 
-/* Liitutaulun alareunan koristeellinen teksti */
-
 .board-caption {
     margin: 20px 0 0;
 
@@ -456,12 +476,11 @@ h1 {
 
 
 /* ========================================
-   10. NÄPPÄIMISTÖKÄYTTÖ JA SAAVUTETTAVUUS
+   10. NÄPPÄIMISTÖKÄYTTÖ
 ======================================== */
 
 .task-checkbox:focus-visible,
-button:focus-visible,
-.clear-button:focus-visible {
+button:focus-visible {
     outline: 3px solid #e2ad43;
     outline-offset: 3px;
 }
